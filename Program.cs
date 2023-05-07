@@ -12,6 +12,10 @@ Console.Write("Введите количество элементов масси
 int mas = Convert.ToInt32(Console.ReadLine());
 string[] stringArray = new string[mas];
 
+CreateArray(stringArray);
+PrintArray(stringArray);
+PrintArray(FindSymbol(stringArray));
+
 void CreateArray(string[] stringArray)
 {
   for (int i = 0; i < stringArray.Length; i++)
@@ -26,7 +30,7 @@ string[] FindSymbol(string[] stringArray)
 {
   int count = 0;
   for (int i = 0; i < stringArray.Length; i++)
-  {
+  { 
     if (stringArray[i].Length <= 3)
       count++;
   }
@@ -53,7 +57,3 @@ void PrintArray(string[] stringArray)
   Console.Write("]");
   Console.WriteLine();
 }
-
-CreateArray(stringArray);
-PrintArray(stringArray);
-PrintArray(FindSymbol(stringArray));
